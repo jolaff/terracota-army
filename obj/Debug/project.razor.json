@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "/media/joelfilho/0086836e-f9af-4b3d-95b8-9c20af36a19b/Projects/Unity/Terracota Army/Assembly-CSharp.csproj",
+  "TargetFramework": "v4.7.1",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}
