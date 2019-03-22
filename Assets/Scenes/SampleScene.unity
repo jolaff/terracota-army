@@ -9770,7 +9770,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInputName: Horizontal
   verticalInputName: Vertical
-  velocity: 6
+  walkSpeed: 6
+  runSpeed: 12
+  runBuildUpSpeed: 4
+  runKey: 304
+  slopeForce: 6
+  slopeForceRayLength: 1.5
+  jumpFallOff:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0026550293
+      value: 1.001648
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.70078474
+      value: 0.0016437522
+      inSlope: -0.025904406
+      outSlope: -0.025904406
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.31826407
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  jumpMultiplier: 10
+  jumpKey: 32
 --- !u!143 &1496499894
 CharacterController:
   m_ObjectHideFlags: 0
@@ -9797,7 +9828,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496499892}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 57, y: 1, z: 30}
+  m_LocalPosition: {x: 27, y: 1, z: 9.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1790597425}
@@ -9885,7 +9916,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 60
   orthographic: 0
