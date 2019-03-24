@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CC548C5C-C8D9-DAB2-6CA8-E8AA51621CFC}</ProjectGuid>
+    <ProjectGuid>{58C978C0-1F0B-C02D-9A68-17023C65B5C9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -55,34 +55,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\PlayerMove.cs" />
+     <Compile Include="Assets\Scripts\Player\CameraBob.cs" />
+     <Compile Include="Assets\Scripts\Player\MouseCamera.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerAudio.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>/media/joelfilho/0086836e-f9af-4b3d-95b8-9c20af36a19b/Projects/Unity/Terracota Army/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>/home/joelfilho/Documents/terracota-army/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
- <HintPath>/media/joelfilho/0086836e-f9af-4b3d-95b8-9c20af36a19b/Projects/Unity/Terracota Army/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+ <HintPath>/home/joelfilho/Documents/terracota-army/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/media/joelfilho/0086836e-f9af-4b3d-95b8-9c20af36a19b/Projects/Unity/Terracota Army/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/home/joelfilho/Documents/terracota-army/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>/media/joelfilho/0086836e-f9af-4b3d-95b8-9c20af36a19b/Projects/Unity/Terracota Army/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>/home/joelfilho/Documents/terracota-army/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>/media/joelfilho/0086836e-f9af-4b3d-95b8-9c20af36a19b/Projects/Unity/Terracota Army/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>/home/joelfilho/Documents/terracota-army/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>/media/joelfilho/0086836e-f9af-4b3d-95b8-9c20af36a19b/Projects/Unity/Terracota Army/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>/home/joelfilho/Documents/terracota-army/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.AddOns.Editor">
- <HintPath>/media/joelfilho/0086836e-f9af-4b3d-95b8-9c20af36a19b/Projects/Unity/Terracota Army/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+ <HintPath>/home/joelfilho/Documents/terracota-army/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/media/joelfilho/0086836e-f9af-4b3d-95b8-9c20af36a19b/Projects/Unity/Terracota Army/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/home/joelfilho/Documents/terracota-army/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>/media/joelfilho/0086836e-f9af-4b3d-95b8-9c20af36a19b/Projects/Unity/Terracota Army/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>/home/joelfilho/Documents/terracota-army/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/home/joelfilho/Unity/Hub/Editor/2019.2.0a4/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -264,17 +266,17 @@
  <Reference Include="nunit.framework">
  <HintPath>/home/joelfilho/Unity/Hub/Editor/2019.2.0a4/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Analytics.Editor">
- <HintPath>/media/joelfilho/0086836e-f9af-4b3d-95b8-9c20af36a19b/Projects/Unity/Terracota Army/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <Reference Include="Unity.Analytics.StandardEvents">
+ <HintPath>/home/joelfilho/Documents/terracota-army/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>/media/joelfilho/0086836e-f9af-4b3d-95b8-9c20af36a19b/Projects/Unity/Terracota Army/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>/home/joelfilho/Documents/terracota-army/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>/media/joelfilho/0086836e-f9af-4b3d-95b8-9c20af36a19b/Projects/Unity/Terracota Army/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <Reference Include="Unity.Analytics.Editor">
+ <HintPath>/home/joelfilho/Documents/terracota-army/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Purchasing">
- <HintPath>/media/joelfilho/0086836e-f9af-4b3d-95b8-9c20af36a19b/Projects/Unity/Terracota Army/Library/PackageCache/com.unity.purchasing@2.0.1/UnityEngine.Purchasing.dll</HintPath>
+ <HintPath>/home/joelfilho/Documents/terracota-army/Library/PackageCache/com.unity.purchasing@2.0.1/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/home/joelfilho/Unity/Hub/Editor/2019.2.0a4/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
