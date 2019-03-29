@@ -19,6 +19,7 @@ public class MouseCamera {
     public void Init(Transform player, Transform camera) {
         playerTargetRotation = player.localRotation;
         cameraTargetRotation = camera.localRotation;
+        GameObject.Find("Object Text").GetComponent<Text>().text = "";
     }
 
     // Rotates the camera on the X Axis and the player on the Y Axis.
