@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private float stickToGroundForce;
     [SerializeField] private float gravityMultiplier;
     [SerializeField] private float stepInterval;
+	[HideInInspector] public bool IsWalking { get { return isWalking; } } //Im just gonna borrow that
+	public GameObject deathScreen;
 
     private bool jump;
     private bool jumping;
@@ -42,7 +44,8 @@ public class PlayerController : MonoBehaviour {
         originalCameraPosition = playerCamera.transform.localPosition;
         cameraBob.Init(playerCamera, stepInterval);
         mouseCamera.Init(transform, playerCamera.transform);
-        stepCycle = 0.0f;
+		deathScreen.SetActive(false);
+		stepCycle = 0.0f;
         nextStep = stepCycle / 2.0f;
         jumping = false;
     }
@@ -137,4 +140,9 @@ public class PlayerController : MonoBehaviour {
         playerAudio.PlayFootStepAudio(characterController, audioSource);
     }
 
+	public void Die()
+	{
+		deathScreen.SetActive(true);
+		Time.timeScale = 0;
+	}
 }
