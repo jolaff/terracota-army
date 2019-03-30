@@ -1,4 +1,4 @@
 Base path: /home/joelfilho/Unity/Hub/Editor/2019.2.0a4/Editor/Data
 Cmd: initializeCompiler
-
-Quitting shader compiler process
+Cmd: compileSnippet
+  api=15 type=0 insize=1596 outsize=8991 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH VERTEXLIGHT_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_FULL_HDR ok=1
