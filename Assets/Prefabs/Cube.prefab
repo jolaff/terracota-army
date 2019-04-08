@@ -126,4 +126,4 @@ MonoBehaviour:
   throwForce: 600
   objectText: {fileID: 0}
   playerHand: {fileID: 0}
-  isPickable: 0
+  isPickable: 1
