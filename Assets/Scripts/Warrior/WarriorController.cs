@@ -9,7 +9,11 @@ public class WarriorController : MonoBehaviour
 {
 	public State state;
 	public float wanderingRange;
+	public float wanderingSpeed;
+	public float alertedSpeed;
+	public float chasingSpeed;
 
+	Animator animator;
 	GameObject player;
 	PlayerController playerController;
 	WarriorTriggers triggers;
@@ -20,6 +24,7 @@ public class WarriorController : MonoBehaviour
 	{
 		triggers = GetComponent<WarriorTriggers>();
 		agent = GetComponent<NavMeshAgent>();
+		animator = transform.GetComponentInChildren<Animator>();
 		player = GameObject.Find("Player");
 		playerController = player.GetComponent<PlayerController>();
 	}
@@ -32,6 +37,8 @@ public class WarriorController : MonoBehaviour
 
     void Update()
     {
+		agent.speed = state == State.wandering ? wanderingSpeed : state == State.alerted ? alertedSpeed : state == State.chasing ? chasingSpeed : 0;
+
 		if (state == State.chasing && triggers.CanSee(player))
 		{
 			agent.SetDestination(player.transform.position);
@@ -47,6 +54,8 @@ public class WarriorController : MonoBehaviour
 		{
 			agent.SetDestination(RandomNavmeshLocation(wanderingRange));
 		}
+
+		animator.SetFloat("Speed", agent.velocity.magnitude);
 	}
 
 

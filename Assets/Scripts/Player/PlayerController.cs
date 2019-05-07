@@ -137,7 +137,7 @@ public class PlayerController : MonoBehaviour {
 
         nextStep = stepCycle + stepInterval;
 
-        playerAudio.PlayFootStepAudio(characterController, audioSource);
+        playerAudio.PlayFootStepAudio(characterController, audioSource, isWalking);
     }
 
 	public void Die()

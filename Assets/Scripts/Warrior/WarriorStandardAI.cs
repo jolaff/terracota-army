@@ -17,8 +17,6 @@ public class WarriorStandardAI : MonoBehaviour
 	public bool lurk = false; 
 	[Tooltip("when reached, warrior will start chasing the player")]
 	public float minLurkingDistance; 
-	[Tooltip("when reached, warrior will give up on lurking (set to -1, to never stop)")]
-	public float maxLurkingDistance;
 
 	GameObject player;
 	PlayerController playerController;
@@ -27,7 +25,7 @@ public class WarriorStandardAI : MonoBehaviour
 	float timeOfAwaking;
 	float timeOfIntrestLoss;
 	Vector3 checkingPosition;
-	MeshRenderer rend;
+	//MeshRenderer rend;
 
 
 	void Start()
@@ -36,7 +34,7 @@ public class WarriorStandardAI : MonoBehaviour
 		triggers = GetComponent<WarriorTriggers>();
 		player = player = GameObject.Find("Player");
 		playerController = player.GetComponent<PlayerController>();
-		rend = transform.GetChild(0).GetComponent<MeshRenderer>();
+		//rend = transform.GetChild(0).GetComponent<MeshRenderer>();
 
 		controller.state = State.standing;
     }
@@ -48,7 +46,7 @@ public class WarriorStandardAI : MonoBehaviour
 		if (controller.state == State.standing) saturation = 1f;
 		else if (controller.state == State.waiting) saturation = (timeOfAwaking - Time.time) / timeToAwake;
 
-		rend.material.color = new Color(saturation, 0, 0);
+		//rend.material.color = new Color(saturation, 0, 0);
 
 		if (controller.state == State.standing && triggers.DistanceFrom(player) <= triggers.sightDistance && triggers.CanFeel(player))
 		{
@@ -65,11 +63,6 @@ public class WarriorStandardAI : MonoBehaviour
 		if (controller.state == State.lurking)
 		{
 			float distance = triggers.DistanceFrom(player);
-
-			if (maxLurkingDistance != -1 && distance >= maxLurkingDistance)
-			{
-				controller.state = State.wandering;
-			}
 
 			if (distance <= minLurkingDistance && triggers.CanSee(player))
 			{
